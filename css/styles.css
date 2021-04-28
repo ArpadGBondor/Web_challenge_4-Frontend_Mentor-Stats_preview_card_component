@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 15px;
+}
+
+body {
+  background: var(--color-bg-main);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: 'Lexend Deca', sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+h1,
+h2 {
+  font-family: 'Inter', sans-serif;
+}
+
+.component {
+  background: var(--color-bg-card);
+  color: var(--color-font-1);
+  display: flex;
+  justify-content: stretch;
+  align-items: stretch;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.component-text {
+  padding: 2rem 2rem 0.5rem;
+  text-align: center;
+}
+
+.main-text {
+  margin: 1rem auto;
+}
+
+.main-text h1 {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+.main-text .highlight {
+  color: var(--color-highlight);
+}
+
+.main-text p {
+  color: var(--color-font-3);
+  line-height: 1.75;
+  font-weight: 200;
+}
+
+.component-text ul {
+  color: var(--color-font-1);
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-direction: column;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.component-text li {
+  margin: 1rem auto;
+  display: block;
+  text-align: center;
+}
+
+.component-text li h2 {
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.component-text li p {
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+  color: var(--color-font-3);
+  font-weight: 200;
+  font-size: 0.9rem;
+  letter-spacing: 0.1rem;
+}
+
+.cover-image {
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+
+.cover-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  margin: 0;
+}
+
+.cover-image:after {
+  content: '';
+  background: hsla(277, 100%, 40%, 0.5);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.attribution {
+  color: var(--color-font-1);
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: var(--color-font-3);
+}
+
+@media screen and (min-width: 800px) {
+  body {
+    min-height: 100vh;
+  }
+  .component {
+    justify-content: center;
+    flex-direction: row-reverse;
+    max-width: 1100px;
+  }
+
+  .component-text {
+    padding: 1rem 5.5rem 3rem 5rem;
+    text-align: left;
+    width: 52%;
+  }
+
+  .main-text {
+    margin: 4rem 0;
+  }
+  .main-text h1 {
+    margin-bottom: 1.5rem;
+    font-size: 2.4rem;
+  }
+
+  .main-text p {
+    width: 90%;
+  }
+
+  .component-text ul {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: row;
+    list-style: none;
+  }
+
+  .component-text li {
+    margin: 1rem auto 1rem 0;
+    text-align: left;
+  }
+  .component-text li p {
+    font-size: 0.8rem;
+  }
+  .cover-image {
+    width: 48%;
+  }
+  .cover-image img {
+    content: url('../images/image-header-desktop.jpg');
+  }
+}
